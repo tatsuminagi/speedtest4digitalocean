@@ -111,8 +111,6 @@ def main(run_at):
         for key in sorted(result.keys()):
             f.write("{0}: {1}\n".format(key, result[key]))
         f.write("\n")
-    
-    print("exit main")
     return
         
 def CountDown(secondsLeft, run_at):
@@ -136,7 +134,6 @@ def CountDown(secondsLeft, run_at):
 
 def RunAtEveryHour(lastTime, secondDiff):
     # start the first run immediately
-    print hourRecorder
     if not hourRecorder:
         now = datetime.now()        
         hourRecorder.add(now.hour)
@@ -152,10 +149,8 @@ def RunAtEveryHour(lastTime, secondDiff):
                 run_at += timedelta(seconds=secondDiff)
             else:
                 break
-        
-        print run_at    
+            
         delay = (run_at - datetime.now()).total_seconds()
-        print delay        
         
         #t = Timer(delay, CountDown, [delay, run_at])
         
