@@ -111,6 +111,9 @@ def main(run_at):
         for key in sorted(result.keys()):
             f.write("{0}: {1}\n".format(key, result[key]))
         f.write("\n")
+    
+    print("exit main")
+    return
         
 def CountDown(secondsLeft, run_at):
     t0 = time.time()
@@ -129,26 +132,30 @@ def CountDown(secondsLeft, run_at):
     while True:
         if secondsLeft - (time.time() - t0) <= 0:
             main(run_at)
+            break
 
 def RunAtEveryHour(lastTime, secondDiff):
     # start the first run immediately
+    print hourRecorder
     if not hourRecorder:
         now = datetime.now()        
         hourRecorder.add(now.hour)
         main(now)
         RunAtEveryHour(now, secondDiff=secondDiff)
     else:
-        y = lastTime + timedelta(seconds=secondDiff)
-        run_at = y.replace(day=y.day, hour=y.hour, minute=y.minute, second=y.second, microsecond=y.microsecond)    
+        run_at = lastTime + timedelta(seconds=secondDiff)
         while True:
-            # no need to test at sleeping hours... (2:30am-7:00am)
-            if run_at.hour in {3, 4, 5, 6, 7} or \
-               (run_at.hour == 2 and run_at.minute >= 30):
+            # no need to test at sleeping hours... (2:30am-6:30am)
+            if run_at.hour in {3, 4, 5} or \
+               (run_at.hour == 2 and run_at.minute >= 30) or\
+               (run_at.hour == 6 and run_at.minute <= 30):
                 run_at += timedelta(seconds=secondDiff)
             else:
                 break
-            
+        
+        print run_at    
         delay = (run_at - datetime.now()).total_seconds()
+        print delay        
         
         #t = Timer(delay, CountDown, [delay, run_at])
         
