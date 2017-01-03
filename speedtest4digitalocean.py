@@ -136,7 +136,7 @@ def main(run_at):
         f.write("\n")
         f.write("Tested at {0}\n".format(run_at.strftime('%H:%M:%S on %d %b %Y')))
         for key in sorted(result.keys()):
-            f.write("{0}: {1}\n".format(key, result[key]))
+            f.write("{0}: {1:.3f}\n".format(key, result[key]))
         f.write("\n")
         
     print("")
