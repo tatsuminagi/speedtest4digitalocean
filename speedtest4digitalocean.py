@@ -6,12 +6,14 @@ import shutil
 import time
 import requests
 import multiprocessing
+import subprocess
 from datetime import datetime, timedelta
 #from threading import Timer
 
-MaxTime = 120  # maximum download time, NO BIGGER THAN 120 SECS!!!
+MaxTime = 120  # maximum download time (secs), NO BIGGER THAN 120 SECS!!!
 hourRecorder = set()
 secondDiff = 3600
+noPings = 20
 
 # core code for testing download speed
 def downloadFile(url, queue, directory='.') :
@@ -65,6 +67,31 @@ def downloadFile(url, queue, directory='.') :
     print("")
     print("Download completed, elapsed time: {}".format(time.time() - start))
     
+def PingTest(url, noPings):
+    call = ['ping', '-c', str(noPings), url]
+    s = subprocess.Popen(' '.join(call), shell=True, stdout=subprocess.PIPE)
+    out = ''
+    returncode = s.poll()
+    while True:
+        line = s.stdout.readline()
+        if line == '':
+            break
+        out += line
+        line = line.strip()
+        print line
+        #returncode = s.poll()
+    
+    print('_' * 80)
+    
+    out = out.split()
+    loss = out[ out.index('packet')-1 ]
+    # check if all ping lost
+    if loss == '100%':
+        return None, noPings
+    avg = float( out[-2].split('/')[1] )
+    loss = int( round(float(loss[:-1]) / 100 * noPings) )
+    return avg, loss
+    
 def ReadURLs(filename):
     urls = []
     with open(filename, 'r') as f:
@@ -101,9 +128,9 @@ def main(run_at):
             os.remove(directory + '/' + localFilename)
         except:
             pass
-        resultFilename = "result.txt".format(
-                                             time.strftime('%Y_%m_%d_%H_%M',time.localtime(time.time()))
-                                            )
+        
+    resultFilename  = "result_download.txt"
+    resultFilename2 = "result_ping.txt"
     with open(resultFilename, 'a') as f:
         f.write("=" * 60)
         f.write("\n")
@@ -111,6 +138,27 @@ def main(run_at):
         for key in sorted(result.keys()):
             f.write("{0}: {1}\n".format(key, result[key]))
         f.write("\n")
+        
+    print("")
+    print("=" * 80)
+    print("")
+    print("Ping test")
+    print("_" * 80)
+    
+   
+    with open(resultFilename2, 'a') as f:
+        f.write("=" * 60)
+        f.write("\n")
+        f.write("Tested at {0}\n".format(run_at.strftime('%H:%M:%S on %d %b %Y')))
+        for url in urls:
+            serverName = url[17:21]
+            urlPing = url[7:].split('/')[0]
+            avg, loss = PingTest(urlPing, noPings)
+            if avg == None:
+                avg = -1
+            f.write("{0}: avg={1:>7.3f}, loss={2:>2}/{3}\n".format(serverName, avg, loss, noPings))
+        f.write("\n")
+        
     return
         
 def CountDown(secondsLeft, run_at):
