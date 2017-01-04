@@ -167,7 +167,7 @@ def CountDown(secondsLeft, run_at):
     while secondsLeft - (time.time() - t0) >= 1:
         m, s = divmod(int(secondsLeft - (time.time() - t0)), 60)
         if m == 0:
-            print("\r{0} sec left until the next run...".format(s)),
+            print("\r{0} sec left until the next run...{1:<10}".format(s, " ")),
         else:
             print("\r{0} min {1} sec left until the next run...".format(m, s)),
         sys.stdout.flush()
