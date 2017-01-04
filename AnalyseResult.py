@@ -34,6 +34,7 @@ def ReadPingResults(filename):
 
 def ReadDownloadResults(filename):
     downloadRes = {}
+    hourList = []
     with open(filename, 'r') as f:
         for line in f:
             if line[0:4] == '====' or line == '\n':
@@ -41,6 +42,7 @@ def ReadDownloadResults(filename):
             elif line[0:6] == 'Tested':
                 tempLine = line.split()
                 hour = int(tempLine[2].split(':')[0])
+                hourList.append(hour)
             else:
                 server = line[0:4]
                 tempLine = line[6:].strip()
@@ -51,13 +53,24 @@ def ReadDownloadResults(filename):
                 else:
                     downloadRes[server] = np.zeros((24, 1))
                     downloadRes[server][hour, 0] = speed
-    return downloadRes
+    return downloadRes, np.array(hourList)
 
 if __name__ == '__main__':
     pingRes = ReadPingResults('result_ping.txt')
-    downloadRes = ReadDownloadResults('result_download.txt')
+    downloadRes, hourList = ReadDownloadResults('result_download.txt')
     keys = ['nyc1', 'nyc2', 'nyc3', 'ams2', 'ams3', 'sfo1', 'sfo2', 
             'sgp1', 'lon1', 'fra1', 'tor1', 'blr1']
+    
+    for key in keys:
+        speed = np.mean(downloadRes[key][hourList])
+        speedStd = np.std(downloadRes[key][hourList])
+        pingTime, pingLoss = np.mean(pingRes[key][hourList, :], axis=0)
+        pingTimeStd, pingLossStd = np.std(pingRes[key][hourList, :], axis=0)
+        print("_" * 80)
+        print("{0}".format(key))
+        print("\tspeed: {0:.3f} KB/s ({1:.3f})".format(speed, speedStd))
+        print("\tping:  {0:.3f} ms   ({1:.3f})".format(pingTime, pingTimeStd))
+        print("\tloss:  {0:.3f} %    ({1:.3f})".format(pingLoss, pingLossStd))
     
     x_smooth = np.linspace(0, 23, 200)
     
@@ -90,3 +103,4 @@ if __name__ == '__main__':
     plt.legend()
     
     plt.show()
+    
