@@ -88,7 +88,7 @@ def PingTest(url, noPings):
     # check if all ping lost
     if loss == '100%':
         return None, noPings
-    avg = float( out[-2].split('/')[1] )
+    avg = float( out[ out.index('min/avg/max/mdev')+2 ].split('/')[1] )
     loss = int( round(float(loss[:-1]) / 100 * noPings) )
     return avg, loss
     
