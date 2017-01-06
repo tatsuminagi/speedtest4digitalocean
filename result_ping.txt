@@ -1,0 +1,600 @@
+============================================================
+Tested at 23:49:31 on 03 Jan 2017
+nyc1: avg=306.639, loss= 5/20
+nyc2: avg=280.280, loss= 5/20
+nyc3: avg=279.687, loss= 3/20
+ams2: avg=306.613, loss= 1/20
+ams3: avg=319.153, loss= 1/20
+sfo1: avg=418.326, loss= 8/20
+sfo2: avg=355.346, loss= 1/20
+sgp1: avg=252.090, loss= 4/20
+lon1: avg=491.581, loss= 8/20
+fra1: avg=258.538, loss= 0/20
+tor1: avg=322.927, loss= 9/20
+blr1: avg=394.437, loss= 3/20
+
+============================================================
+Tested at 00:49:31 on 04 Jan 2017
+nyc1: avg=303.917, loss= 5/20
+nyc2: avg=277.974, loss= 4/20
+nyc3: avg=297.737, loss= 0/20
+ams2: avg=226.103, loss= 0/20
+ams3: avg=244.124, loss= 0/20
+sfo1: avg=394.688, loss= 4/20
+sfo2: avg=327.745, loss= 2/20
+sgp1: avg=257.288, loss= 7/20
+lon1: avg=474.880, loss= 9/20
+fra1: avg=243.123, loss= 0/20
+tor1: avg=319.852, loss= 6/20
+blr1: avg=390.383, loss= 1/20
+
+============================================================
+Tested at 01:49:31 on 04 Jan 2017
+nyc1: avg=304.374, loss= 2/20
+nyc2: avg=225.005, loss= 0/20
+nyc3: avg=222.449, loss= 0/20
+ams2: avg=223.143, loss= 0/20
+ams3: avg=242.606, loss= 0/20
+sfo1: avg=357.776, loss= 7/20
+sfo2: avg=338.690, loss= 3/20
+sgp1: avg=253.687, loss= 8/20
+lon1: avg=472.126, loss= 5/20
+fra1: avg=225.702, loss= 0/20
+tor1: avg=315.933, loss= 0/20
+blr1: avg=354.408, loss= 0/20
+
+============================================================
+Tested at 06:49:31 on 04 Jan 2017
+nyc1: avg=301.188, loss= 1/20
+nyc2: avg=221.405, loss= 0/20
+nyc3: avg=222.110, loss= 0/20
+ams2: avg=280.242, loss= 2/20
+ams3: avg=295.219, loss= 0/20
+sfo1: avg=324.304, loss= 3/20
+sfo2: avg=317.178, loss= 2/20
+sgp1: avg=155.959, loss= 0/20
+lon1: avg=469.978, loss= 8/20
+fra1: avg=229.717, loss= 0/20
+tor1: avg=306.848, loss= 2/20
+blr1: avg=335.839, loss= 0/20
+
+============================================================
+Tested at 07:49:31 on 04 Jan 2017
+nyc1: avg=310.856, loss= 0/20
+nyc2: avg=224.606, loss= 0/20
+nyc3: avg=221.981, loss= 0/20
+ams2: avg=234.812, loss= 0/20
+ams3: avg=270.177, loss= 0/20
+sfo1: avg=324.994, loss= 6/20
+sfo2: avg=323.194, loss= 3/20
+sgp1: avg=152.086, loss= 0/20
+lon1: avg=476.581, loss=10/20
+fra1: avg=226.944, loss= 0/20
+tor1: avg=332.238, loss= 4/20
+blr1: avg=336.624, loss= 1/20
+
+============================================================
+Tested at 08:49:31 on 04 Jan 2017
+nyc1: avg=348.914, loss= 2/20
+nyc2: avg=227.146, loss= 0/20
+nyc3: avg=230.160, loss= 0/20
+ams2: avg=313.175, loss= 0/20
+ams3: avg=338.604, loss= 0/20
+sfo1: avg=325.535, loss= 5/20
+sfo2: avg=327.657, loss= 3/20
+sgp1: avg=195.302, loss= 0/20
+lon1: avg=474.076, loss= 4/20
+fra1: avg=226.446, loss= 0/20
+tor1: avg=323.386, loss= 2/20
+blr1: avg=340.423, loss= 0/20
+
+============================================================
+Tested at 09:49:31 on 04 Jan 2017
+nyc1: avg=300.887, loss= 1/20
+nyc2: avg=223.535, loss= 0/20
+nyc3: avg=224.028, loss= 1/20
+ams2: avg=222.872, loss= 0/20
+ams3: avg=304.391, loss= 0/20
+sfo1: avg=325.902, loss=10/20
+sfo2: avg=322.594, loss= 7/20
+sgp1: avg=283.895, loss= 0/20
+lon1: avg=469.938, loss= 2/20
+fra1: avg=290.612, loss= 0/20
+tor1: avg=331.579, loss= 2/20
+blr1: avg=381.039, loss= 0/20
+
+============================================================
+Tested at 10:49:31 on 04 Jan 2017
+nyc1: avg=301.713, loss= 3/20
+nyc2: avg=221.582, loss= 0/20
+nyc3: avg=223.260, loss= 0/20
+ams2: avg=226.993, loss= 0/20
+ams3: avg=316.721, loss= 1/20
+sfo1: avg=327.289, loss= 5/20
+sfo2: avg=323.132, loss= 5/20
+sgp1: avg=260.797, loss= 2/20
+lon1: avg=477.646, loss= 6/20
+fra1: avg=326.514, loss= 0/20
+tor1: avg=316.148, loss= 2/20
+blr1: avg=383.488, loss= 0/20
+
+============================================================
+Tested at 11:49:31 on 04 Jan 2017
+nyc1: avg=305.102, loss= 3/20
+nyc2: avg=238.885, loss= 0/20
+nyc3: avg=226.847, loss= 0/20
+ams2: avg=235.598, loss= 0/20
+ams3: avg=323.892, loss= 0/20
+sfo1: avg=385.887, loss=10/20
+sfo2: avg=329.860, loss= 5/20
+sgp1: avg=249.396, loss= 8/20
+lon1: avg=515.665, loss= 8/20
+fra1: avg=309.601, loss= 0/20
+tor1: avg=318.606, loss= 4/20
+blr1: avg=366.012, loss= 0/20
+
+============================================================
+Tested at 12:49:31 on 04 Jan 2017
+nyc1: avg=312.558, loss= 2/20
+nyc2: avg=265.440, loss= 1/20
+nyc3: avg=253.610, loss= 0/20
+ams2: avg=239.831, loss= 0/20
+ams3: avg=329.758, loss= 0/20
+sfo1: avg=399.462, loss= 6/20
+sfo2: avg=330.128, loss= 4/20
+sgp1: avg=251.566, loss= 2/20
+lon1: avg=489.935, loss= 8/20
+fra1: avg=315.302, loss= 0/20
+tor1: avg=322.719, loss= 2/20
+blr1: avg=384.378, loss= 1/20
+
+============================================================
+Tested at 13:49:31 on 04 Jan 2017
+nyc1: avg=305.129, loss= 4/20
+nyc2: avg=224.975, loss= 1/20
+nyc3: avg=223.424, loss= 0/20
+ams2: avg=248.903, loss= 2/20
+ams3: avg=335.607, loss= 4/20
+sfo1: avg=343.813, loss= 3/20
+sfo2: avg=339.279, loss= 0/20
+sgp1: avg=187.478, loss= 0/20
+lon1: avg=477.331, loss= 5/20
+fra1: avg=316.639, loss= 3/20
+tor1: avg=321.620, loss= 7/20
+blr1: avg=388.270, loss= 0/20
+
+============================================================
+Tested at 14:49:31 on 04 Jan 2017
+nyc1: avg=311.718, loss= 3/20
+nyc2: avg=223.544, loss= 0/20
+nyc3: avg=234.951, loss= 0/20
+ams2: avg=252.897, loss= 4/20
+ams3: avg=330.693, loss= 5/20
+sfo1: avg=372.983, loss= 5/20
+sfo2: avg=327.584, loss= 4/20
+sgp1: avg=278.211, loss= 6/20
+lon1: avg=472.500, loss= 9/20
+fra1: avg=298.454, loss= 2/20
+tor1: avg=317.162, loss= 2/20
+blr1: avg=389.183, loss= 0/20
+
+============================================================
+Tested at 15:49:31 on 04 Jan 2017
+nyc1: avg=305.301, loss= 1/20
+nyc2: avg=221.305, loss= 0/20
+nyc3: avg=221.664, loss= 0/20
+ams2: avg=272.321, loss= 3/20
+ams3: avg=266.776, loss= 1/20
+sfo1: avg=368.880, loss= 7/20
+sfo2: avg=327.382, loss= 6/20
+sgp1: avg=192.982, loss= 0/20
+lon1: avg=477.828, loss=12/20
+fra1: avg=247.149, loss= 3/20
+tor1: avg=320.913, loss= 3/20
+blr1: avg=389.269, loss= 0/20
+
+============================================================
+Tested at 16:49:31 on 04 Jan 2017
+nyc1: avg=372.063, loss= 2/20
+nyc2: avg=399.465, loss=10/20
+nyc3: avg=385.131, loss=11/20
+ams2: avg=251.963, loss= 3/20
+ams3: avg=267.722, loss= 4/20
+sfo1: avg=328.671, loss= 7/20
+sfo2: avg=327.980, loss= 8/20
+sgp1: avg=253.994, loss= 7/20
+lon1: avg=475.247, loss=11/20
+fra1: avg=254.259, loss= 1/20
+tor1: avg=385.687, loss= 4/20
+blr1: avg=384.710, loss= 0/20
+
+============================================================
+Tested at 17:49:31 on 04 Jan 2017
+nyc1: avg=371.265, loss= 4/20
+nyc2: avg=392.304, loss= 9/20
+nyc3: avg=398.949, loss=10/20
+ams2: avg=250.809, loss= 5/20
+ams3: avg=266.936, loss= 3/20
+sfo1: avg=413.379, loss= 6/20
+sfo2: avg=343.013, loss= 5/20
+sgp1: avg=250.939, loss= 1/20
+lon1: avg=492.754, loss= 7/20
+fra1: avg=245.924, loss= 2/20
+tor1: avg=329.309, loss= 3/20
+blr1: avg=359.484, loss= 0/20
+
+============================================================
+Tested at 18:49:31 on 04 Jan 2017
+nyc1: avg=301.902, loss= 4/20
+nyc2: avg=245.152, loss= 0/20
+nyc3: avg=256.820, loss= 0/20
+ams2: avg=248.317, loss= 3/20
+ams3: avg=265.808, loss= 2/20
+sfo1: avg=393.493, loss= 3/20
+sfo2: avg=328.829, loss= 1/20
+sgp1: avg=247.924, loss= 6/20
+lon1: avg=474.988, loss= 7/20
+fra1: avg=315.157, loss= 2/20
+tor1: avg=316.701, loss= 5/20
+blr1: avg=397.092, loss= 0/20
+
+============================================================
+Tested at 19:49:31 on 04 Jan 2017
+nyc1: avg=304.839, loss= 6/20
+nyc2: avg=252.288, loss= 0/20
+nyc3: avg=273.904, loss= 0/20
+ams2: avg=294.115, loss= 1/20
+ams3: avg=274.741, loss= 2/20
+sfo1: avg=407.037, loss= 6/20
+sfo2: avg=343.325, loss= 8/20
+sgp1: avg=251.380, loss= 2/20
+lon1: avg=482.063, loss= 8/20
+fra1: avg=357.973, loss= 4/20
+tor1: avg=319.989, loss= 4/20
+blr1: avg=397.993, loss= 0/20
+
+============================================================
+Tested at 20:49:31 on 04 Jan 2017
+nyc1: avg=304.170, loss= 2/20
+nyc2: avg=223.028, loss= 0/20
+nyc3: avg=222.801, loss= 0/20
+ams2: avg=340.808, loss= 3/20
+ams3: avg=368.963, loss= 5/20
+sfo1: avg=393.338, loss= 8/20
+sfo2: avg=330.168, loss= 6/20
+sgp1: avg=232.066, loss= 7/20
+lon1: avg=474.503, loss= 6/20
+fra1: avg=518.154, loss= 2/20
+tor1: avg=340.709, loss= 7/20
+blr1: avg=397.694, loss= 0/20
+
+============================================================
+Tested at 21:49:31 on 04 Jan 2017
+nyc1: avg=307.636, loss= 4/20
+nyc2: avg=251.517, loss= 0/20
+nyc3: avg=252.777, loss= 0/20
+ams2: avg=255.642, loss= 5/20
+ams3: avg=274.511, loss=10/20
+sfo1: avg=409.316, loss= 5/20
+sfo2: avg=331.962, loss= 3/20
+sgp1: avg=266.778, loss=14/20
+lon1: avg=521.201, loss= 8/20
+fra1: avg=331.750, loss= 8/20
+tor1: avg=354.874, loss=10/20
+blr1: avg=386.811, loss= 1/20
+
+============================================================
+Tested at 22:49:31 on 04 Jan 2017
+nyc1: avg=325.614, loss= 4/20
+nyc2: avg=264.726, loss= 1/20
+nyc3: avg=257.942, loss= 0/20
+ams2: avg=277.274, loss= 4/20
+ams3: avg=283.155, loss= 6/20
+sfo1: avg=411.889, loss= 6/20
+sfo2: avg=389.544, loss=11/20
+sgp1: avg=231.790, loss= 2/20
+lon1: avg=514.883, loss= 8/20
+fra1: avg=338.617, loss= 7/20
+tor1: avg=319.523, loss=10/20
+blr1: avg=396.734, loss= 1/20
+
+============================================================
+Tested at 00:20:25 on 05 Jan 2017
+nyc1: avg=315.295, loss= 2/20
+nyc2: avg=265.089, loss= 0/20
+nyc3: avg=279.185, loss= 0/20
+ams2: avg=258.608, loss= 5/20
+ams3: avg=275.496, loss= 2/20
+sfo1: avg=329.684, loss= 8/20
+sfo2: avg=328.437, loss= 4/20
+sgp1: avg=174.466, loss= 0/20
+lon1: avg=470.004, loss= 9/20
+fra1: avg=356.206, loss= 0/20
+tor1: avg=392.484, loss= 0/20
+blr1: avg=377.703, loss= 1/20
+
+============================================================
+Tested at 01:20:25 on 05 Jan 2017
+nyc1: avg=297.335, loss= 1/20
+nyc2: avg=260.549, loss= 0/20
+nyc3: avg=248.702, loss= 0/20
+ams2: avg=250.252, loss= 5/20
+ams3: avg=251.039, loss= 0/20
+sfo1: avg=329.511, loss= 6/20
+sfo2: avg=320.074, loss=10/20
+sgp1: avg=147.092, loss= 0/20
+lon1: avg=524.455, loss= 2/20
+fra1: avg=350.999, loss= 2/20
+tor1: avg=306.172, loss= 1/20
+blr1: avg=343.007, loss= 0/20
+
+============================================================
+Tested at 02:20:25 on 05 Jan 2017
+nyc1: avg=298.746, loss= 0/20
+nyc2: avg=219.020, loss= 0/20
+nyc3: avg=219.012, loss= 0/20
+ams2: avg=236.307, loss= 0/20
+ams3: avg=224.466, loss= 0/20
+sfo1: avg=322.968, loss= 4/20
+sfo2: avg=328.445, loss= 5/20
+sgp1: avg=140.861, loss= 0/20
+lon1: avg=459.025, loss= 3/20
+fra1: avg=312.790, loss= 0/20
+tor1: avg=269.027, loss= 0/20
+blr1: avg=345.655, loss= 0/20
+
+============================================================
+Tested at 07:20:25 on 05 Jan 2017
+nyc1: avg=297.159, loss= 1/20
+nyc2: avg=226.830, loss= 0/20
+nyc3: avg=218.440, loss= 0/20
+ams2: avg=220.038, loss= 0/20
+ams3: avg=219.189, loss= 0/20
+sfo1: avg=311.814, loss= 4/20
+sfo2: avg=322.216, loss= 5/20
+sgp1: avg=140.816, loss= 0/20
+lon1: avg=455.028, loss= 2/20
+fra1: avg=301.879, loss= 0/20
+tor1: avg=312.619, loss= 0/20
+blr1: avg=328.794, loss= 0/20
+
+============================================================
+Tested at 08:20:25 on 05 Jan 2017
+nyc1: avg=297.433, loss= 1/20
+nyc2: avg=219.797, loss= 0/20
+nyc3: avg=218.658, loss= 0/20
+ams2: avg=218.983, loss= 0/20
+ams3: avg=219.746, loss= 0/20
+sfo1: avg=314.351, loss= 1/20
+sfo2: avg=321.006, loss= 7/20
+sgp1: avg=147.557, loss= 1/20
+lon1: avg=461.067, loss= 2/20
+fra1: avg=298.742, loss= 0/20
+tor1: avg=310.408, loss= 0/20
+blr1: avg=328.278, loss= 0/20
+
+============================================================
+Tested at 09:20:25 on 05 Jan 2017
+nyc1: avg=296.838, loss= 3/20
+nyc2: avg=243.029, loss= 0/20
+nyc3: avg=231.544, loss= 0/20
+ams2: avg=351.034, loss= 0/20
+ams3: avg=351.026, loss= 0/20
+sfo1: avg=334.676, loss= 5/20
+sfo2: avg=321.572, loss= 4/20
+sgp1: avg=210.820, loss= 1/20
+lon1: avg=465.776, loss= 6/20
+fra1: avg=383.603, loss= 1/20
+tor1: avg=351.794, loss=12/20
+blr1: avg=368.263, loss= 0/20
+
+============================================================
+Tested at 10:20:25 on 05 Jan 2017
+nyc1: avg=312.770, loss=10/20
+nyc2: avg=256.521, loss= 0/20
+nyc3: avg=260.081, loss= 0/20
+ams2: avg=219.872, loss= 0/20
+ams3: avg=219.089, loss= 0/20
+sfo1: avg=328.448, loss= 3/20
+sfo2: avg=317.555, loss= 3/20
+sgp1: avg=155.785, loss= 0/20
+lon1: avg=465.418, loss= 3/20
+fra1: avg=297.148, loss= 0/20
+tor1: avg=322.374, loss= 2/20
+blr1: avg=369.078, loss= 0/20
+
+============================================================
+Tested at 11:20:25 on 05 Jan 2017
+nyc1: avg=298.214, loss= 5/20
+nyc2: avg=261.212, loss= 0/20
+nyc3: avg=258.100, loss= 0/20
+ams2: avg=266.018, loss= 0/20
+ams3: avg=219.824, loss= 0/20
+sfo1: avg=342.925, loss= 8/20
+sfo2: avg=347.008, loss= 5/20
+sgp1: avg=187.792, loss= 3/20
+lon1: avg=469.929, loss= 3/20
+fra1: avg=325.275, loss= 0/20
+tor1: avg=349.740, loss= 4/20
+blr1: avg=373.725, loss= 0/20
+
+============================================================
+Tested at 12:20:25 on 05 Jan 2017
+nyc1: avg=336.705, loss= 4/20
+nyc2: avg=273.148, loss= 0/20
+nyc3: avg=269.526, loss= 0/20
+ams2: avg=240.838, loss= 0/20
+ams3: avg=222.515, loss= 0/20
+sfo1: avg=346.952, loss= 4/20
+sfo2: avg=333.880, loss= 9/20
+sgp1: avg=191.767, loss= 2/20
+lon1: avg=477.538, loss=10/20
+fra1: avg=453.416, loss= 0/20
+tor1: avg=365.883, loss=11/20
+blr1: avg=381.464, loss= 0/20
+
+============================================================
+Tested at 13:20:25 on 05 Jan 2017
+nyc1: avg=307.113, loss= 2/20
+nyc2: avg=272.194, loss= 1/20
+nyc3: avg=277.023, loss= 0/20
+ams2: avg=224.822, loss= 0/20
+ams3: avg=224.732, loss= 0/20
+sfo1: avg=320.300, loss= 4/20
+sfo2: avg=330.571, loss= 2/20
+sgp1: avg=178.682, loss= 0/20
+lon1: avg=478.062, loss= 3/20
+fra1: avg=305.429, loss= 1/20
+tor1: avg=332.453, loss= 1/20
+blr1: avg=392.459, loss= 0/20
+
+============================================================
+Tested at 14:20:25 on 05 Jan 2017
+nyc1: avg=307.711, loss= 6/20
+nyc2: avg=275.881, loss= 0/20
+nyc3: avg=270.911, loss= 1/20
+ams2: avg=388.376, loss= 6/20
+ams3: avg=415.467, loss= 8/20
+sfo1: avg=338.782, loss= 5/20
+sfo2: avg=332.350, loss= 7/20
+sgp1: avg=186.396, loss= 0/20
+lon1: avg=464.012, loss= 6/20
+fra1: avg=379.776, loss= 0/20
+tor1: avg=357.952, loss= 7/20
+blr1: avg=379.690, loss= 0/20
+
+============================================================
+Tested at 15:20:25 on 05 Jan 2017
+nyc1: avg=304.510, loss= 4/20
+nyc2: avg=265.579, loss= 0/20
+nyc3: avg=262.286, loss= 0/20
+ams2: avg=242.526, loss= 0/20
+ams3: avg=240.083, loss= 0/20
+sfo1: avg=338.480, loss= 1/20
+sfo2: avg=327.336, loss= 6/20
+sgp1: avg=184.965, loss= 0/20
+lon1: avg=473.807, loss= 2/20
+fra1: avg=245.703, loss= 0/20
+tor1: avg=321.685, loss= 2/20
+blr1: avg=382.926, loss= 0/20
+
+============================================================
+Tested at 16:20:25 on 05 Jan 2017
+nyc1: avg=319.239, loss= 5/20
+nyc2: avg=270.732, loss= 0/20
+nyc3: avg=263.305, loss= 0/20
+ams2: avg=242.376, loss= 0/20
+ams3: avg=240.130, loss= 0/20
+sfo1: avg=337.572, loss= 1/20
+sfo2: avg=329.453, loss= 5/20
+sgp1: avg=183.927, loss= 0/20
+lon1: avg=465.768, loss= 2/20
+fra1: avg=246.760, loss= 0/20
+tor1: avg=313.423, loss= 4/20
+blr1: avg=435.327, loss= 0/20
+
+============================================================
+Tested at 17:20:25 on 05 Jan 2017
+nyc1: avg=307.574, loss= 1/20
+nyc2: avg=251.232, loss= 0/20
+nyc3: avg=236.809, loss= 0/20
+ams2: avg=242.533, loss= 0/20
+ams3: avg=249.858, loss= 0/20
+sfo1: avg=339.756, loss= 1/20
+sfo2: avg=332.554, loss= 4/20
+sgp1: avg=189.381, loss= 0/20
+lon1: avg=475.133, loss= 7/20
+fra1: avg=246.732, loss= 0/20
+tor1: avg=321.995, loss= 2/20
+blr1: avg=358.128, loss= 0/20
+
+============================================================
+Tested at 18:20:25 on 05 Jan 2017
+nyc1: avg=307.299, loss= 0/20
+nyc2: avg=268.320, loss= 1/20
+nyc3: avg=256.696, loss= 0/20
+ams2: avg=242.977, loss= 0/20
+ams3: avg=241.038, loss= 0/20
+sfo1: avg=337.520, loss= 5/20
+sfo2: avg=329.227, loss= 2/20
+sgp1: avg=187.213, loss= 0/20
+lon1: avg=470.049, loss= 4/20
+fra1: avg=249.419, loss= 0/20
+tor1: avg=314.741, loss= 1/20
+blr1: avg=347.601, loss= 0/20
+
+============================================================
+Tested at 19:20:25 on 05 Jan 2017
+nyc1: avg=305.307, loss= 3/20
+nyc2: avg=251.058, loss= 0/20
+nyc3: avg=259.244, loss= 0/20
+ams2: avg=246.937, loss= 0/20
+ams3: avg=243.016, loss= 0/20
+sfo1: avg=339.107, loss= 4/20
+sfo2: avg=329.101, loss= 7/20
+sgp1: avg=190.310, loss= 0/20
+lon1: avg=476.517, loss= 4/20
+fra1: avg=250.371, loss= 1/20
+tor1: avg=319.899, loss= 2/20
+blr1: avg=382.149, loss= 0/20
+
+============================================================
+Tested at 20:20:25 on 05 Jan 2017
+nyc1: avg=304.574, loss= 3/20
+nyc2: avg=271.958, loss= 0/20
+nyc3: avg=268.022, loss= 0/20
+ams2: avg=244.869, loss= 0/20
+ams3: avg=241.970, loss= 0/20
+sfo1: avg=375.274, loss=18/20
+sfo2: avg=362.549, loss= 7/20
+sgp1: avg=193.769, loss= 0/20
+lon1: avg=468.328, loss=10/20
+fra1: avg=271.943, loss= 0/20
+tor1: avg=323.701, loss= 6/20
+blr1: avg=398.494, loss= 0/20
+
+============================================================
+Tested at 21:20:25 on 05 Jan 2017
+nyc1: avg=353.733, loss= 1/20
+nyc2: avg=340.965, loss= 0/20
+nyc3: avg=273.068, loss= 0/20
+ams2: avg=246.021, loss= 0/20
+ams3: avg=243.540, loss= 0/20
+sfo1: avg=353.442, loss=10/20
+sfo2: avg=331.206, loss= 7/20
+sgp1: avg=192.939, loss= 0/20
+lon1: avg=475.376, loss= 6/20
+fra1: avg=261.627, loss= 0/20
+tor1: avg=377.157, loss= 5/20
+blr1: avg=392.296, loss= 0/20
+
+============================================================
+Tested at 22:20:25 on 05 Jan 2017
+nyc1: avg=367.098, loss= 3/20
+nyc2: avg=285.575, loss= 2/20
+nyc3: avg=325.135, loss= 2/20
+ams2: avg=255.940, loss= 0/20
+ams3: avg=268.309, loss= 0/20
+sfo1: avg=379.813, loss= 3/20
+sfo2: avg=412.974, loss= 5/20
+sgp1: avg=247.273, loss= 2/20
+lon1: avg=505.504, loss= 6/20
+fra1: avg=317.874, loss= 0/20
+tor1: avg=344.662, loss= 5/20
+blr1: avg=413.920, loss= 1/20
+
+============================================================
+Tested at 23:20:25 on 05 Jan 2017
+nyc1: avg=308.232, loss= 7/20
+nyc2: avg=327.944, loss= 0/20
+nyc3: avg=339.187, loss= 4/20
+ams2: avg=245.533, loss= 0/20
+ams3: avg=242.286, loss= 0/20
+sfo1: avg=387.548, loss= 8/20
+sfo2: avg=330.609, loss= 2/20
+sgp1: avg=185.121, loss= 0/20
+lon1: avg=475.253, loss= 4/20
+fra1: avg=256.812, loss= 0/20
+tor1: avg=328.363, loss= 3/20
+blr1: avg=405.790, loss= 0/20
+
