@@ -8,12 +8,32 @@ import requests
 import multiprocessing
 import subprocess
 from datetime import datetime, timedelta
-#from threading import Timer
 
-MaxTime = 120  # maximum download time (secs), NO BIGGER THAN 120 SECS!!!
+MaxTime = 120     # maximum download testing time (secs)
+secondDiff = 3600 # interval length between test runs (secs)
+noPings = 20      # No. of pings for each test server
+###################################################################################
+# All tests in each turn should be able to complete in secondDiff (secs), 
+# otherwise there would be no waiting intervals between test runs.
+# For example, secondDiff=3600 defines the difference of the begining time of 
+# the current run and the next. There are currently 12 test servers, so each run
+# would take (MaxTime * 12) plus (20 ping times * 12) and this should be within
+# secondDiff.
+###################################################################################
+
+### BELOW WOULD BE AVAILABLE IN THE NEXT VERSION
+# Alternatively, you can set secondDiff to 0, so the next run would start right after
+# the previous finishes.
+
+# global variable
 hourRecorder = set()
-secondDiff = 3600
-noPings = 20
+    
+def ReadURLs(filename):
+    urls = []
+    with open(filename, 'r') as f:
+        for line in f:
+            urls.append(line.strip())
+    return urls
 
 # core code for testing download speed
 def downloadFile(url, queue, directory='.') :
@@ -23,17 +43,18 @@ def downloadFile(url, queue, directory='.') :
     dlTotal = 0    
     localFilename = url.split('/')[-1]
     retryCount = 0
-    while retryCount <= 3:
-        while True:
-            try:
-                s = requests.Session()
-                s.mount(url, requests.adapters.HTTPAdapter(max_retries=5))
-                r = s.get(url, stream=True, timeout=10)
-                break
-            except Exception as e:
-                if repr(e).split('(')[0] == 'HTTPError':
-                    print('HTTP Error, please check your server.lst')
-                    return
+    while retryCount < 3:
+        try:
+            s = requests.Session()
+            s.mount(url, requests.adapters.HTTPAdapter(max_retries=5))
+            r = s.get(url, stream=True, timeout=5)
+        except Exception as e:
+            if repr(e).split('(')[0] == 'HTTPError':
+                print('HTTP Error, please check your server.lst')
+                return
+            else:
+                retryCount += 1
+                print("Connection broken, retry times: {}".format(retryCount))
                 continue
         total_length = int(r.headers.get('content-length'))
         try:
@@ -79,7 +100,6 @@ def PingTest(url, noPings):
         out += line
         line = line.strip()
         print line
-        #returncode = s.poll()
     
     print('_' * 80)
     
@@ -91,13 +111,6 @@ def PingTest(url, noPings):
     avg = float( out[ out.index('min/avg/max/mdev')+2 ].split('/')[1] )
     loss = int( round(float(loss[:-1]) / 100 * noPings) )
     return avg, loss
-    
-def ReadURLs(filename):
-    urls = []
-    with open(filename, 'r') as f:
-        for line in f:
-            urls.append(line.strip())
-    return urls
 
 def main(run_at):
     urls = ReadURLs('servers.lst')
@@ -200,17 +213,6 @@ def RunAtEveryHour(lastTime, secondDiff):
             
         delay = (run_at - datetime.now()).total_seconds()
         
-        #t = Timer(delay, CountDown, [delay, run_at])
-        
-        #t.start()
-        #while True:
-            #if not t.isAlive():
-                #if run_at.hour not in hourRecorder:
-                    #hourRecorder.add(run_at.hour)
-                    #RunAtEveryHour(now, secondDiff=secondDiff)
-                #else:
-                    #t.cancel()
-                    #return
         if run_at.hour not in hourRecorder:
             hourRecorder.add(run_at.hour)
             CountDown(delay, run_at)
@@ -220,3 +222,10 @@ def RunAtEveryHour(lastTime, secondDiff):
     
 if __name__ == '__main__':
     RunAtEveryHour(0, secondDiff=secondDiff)
+    
+    
+    # future change:
+    #     a. change the timer mechanism, define custum No. of test runs such as 24, 
+    #        'one day', etc.
+    #     b. modify RunAtEveryHour, so it can deal with secondDiff=0
+    
