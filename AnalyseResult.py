@@ -58,7 +58,7 @@ def ReadDownloadResults(filename):
     
     return downloadRes, np.array(hourList)
 
-if __name__ == '__main__':
+def DisplayResults():
     pingTimeRes, pingLossRes = ReadPingResults('result_ping.txt')
     downloadRes, hourList = ReadDownloadResults('result_download.txt')
     
@@ -133,5 +133,7 @@ if __name__ == '__main__':
     fig.tight_layout()
     
     plt.show()
-    
+
+if __name__ == '__main__':
+    DisplayResults()
     
