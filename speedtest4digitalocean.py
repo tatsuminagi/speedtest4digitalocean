@@ -7,11 +7,18 @@ import time
 import requests
 import multiprocessing
 import subprocess
+import platform
 from datetime import datetime, timedelta
+from AnalyseResult import DisplayResults
 
-MaxTime = 120     # maximum download testing time (secs)
-secondDiff = 3600 # interval length between test runs (secs)
-noPings = 20      # No. of pings for each test server
+MaxTime = 120           # maximum download testing time (secs)
+secondDiff = 3600       # interval length between test runs (secs)
+noPings = 20            # No. of pings for each test server
+noRuns = 20             # Note that runs between 2:30-6:60 will be skipped, so noRuns
+                        # defines runs for a whole day (24 - 4 = 20)
+plotWhenCompletd = True # if you want to display the results when the runs complete
+if secondDiff == 0:
+    noRuns = 99999999
 ###################################################################################
 # All tests in each turn should be able to complete in secondDiff (secs), 
 # otherwise there would be no waiting intervals between test runs.
@@ -19,14 +26,13 @@ noPings = 20      # No. of pings for each test server
 # the current run and the next. There are currently 12 test servers, so each run
 # would take (MaxTime * 12) plus (20 ping times * 12) and this should be within
 # secondDiff.
-###################################################################################
-
-### BELOW WOULD BE AVAILABLE IN THE NEXT VERSION
 # Alternatively, you can set secondDiff to 0, so the next run would start right after
 # the previous finishes.
+###################################################################################
 
 # global variable
-hourRecorder = set()
+runCount = 0
+
     
 def ReadURLs(filename):
     urls = []
@@ -74,7 +80,7 @@ def downloadFile(url, queue, directory='.') :
                                                                currentSpeed)),
                         sys.stdout.flush()
                         # update current speed                
-                        if queue.qsize():
+                        if not queue.empty():
                             _ = queue.get()
                         queue.put(currentSpeed)
             break
@@ -84,9 +90,11 @@ def downloadFile(url, queue, directory='.') :
             print("\nConnection broken, retry times: {}".format(retryCount))
     if retryCount > 3:
         print("Max retry times reached, download failed")
+        return
         
     print("")
     print("Download completed, elapsed time: {}".format(time.time() - start))
+    return
     
 def PingTest(url, noPings):
     call = ['ping', '-c', str(noPings), url]
@@ -108,7 +116,10 @@ def PingTest(url, noPings):
     # check if all ping lost
     if loss == '100%':
         return None, noPings
-    avg = float( out[ out.index('min/avg/max/mdev')+2 ].split('/')[1] )
+    if platform.system() == 'Linux':
+        avg = float( out[ out.index('min/avg/max/mdev')+2 ].split('/')[1] )
+    else:
+        avg = float( out[ out.index('min/avg/max/stddev')+2 ].split('/')[1] )
     loss = int( round(float(loss[:-1]) / 100 * noPings) )
     return avg, loss
 
@@ -128,9 +139,9 @@ def main(run_at):
     
         # Wait a maximum of X seconds for downloading
         p.join(MaxTime)
-        result[serverName] = q.get()    
-        print("")
+        result[serverName] = q.get()
         if p.is_alive():
+            print("")
             print("Maximum of {0} seconds exceeded.".format(MaxTime))
             # Terminate process
             p.terminate()
@@ -192,29 +203,38 @@ def CountDown(secondsLeft, run_at):
         if secondsLeft - (time.time() - t0) <= 0:
             main(run_at)
             break
+    return
 
-def RunAtEveryHour(lastTime, secondDiff):
+def RunAtEveryHour(lastTime, secondDiff=3600):
     # start the first run immediately
-    if not hourRecorder:
-        now = datetime.now()        
-        hourRecorder.add(now.hour)
+    global runCount
+    if runCount == 0:
+        now = datetime.now()
+        runCount += 1
         main(now)
         RunAtEveryHour(now, secondDiff=secondDiff)
     else:
         run_at = lastTime + timedelta(seconds=secondDiff)
+        if run_at < datetime.now():
+            run_at = datetime.now()
+            
         while True:
             # no need to test at sleeping hours... (2:30am-6:30am)
             if run_at.hour in {3, 4, 5} or \
                (run_at.hour == 2 and run_at.minute >= 30) or\
-               (run_at.hour == 6 and run_at.minute <= 30):
-                run_at += timedelta(seconds=secondDiff)
+               (run_at.hour == 6 and run_at.minute < 30):
+                if secondDiff == 0:
+                    run_at = run_at.replace(hour = 6, minute = 30, second = 0, microsecond = 0)
+                    break
+                else:
+                    run_at += timedelta(seconds=secondDiff)
             else:
                 break
             
         delay = (run_at - datetime.now()).total_seconds()
         
-        if run_at.hour not in hourRecorder:
-            hourRecorder.add(run_at.hour)
+        if runCount < noRuns:
+            runCount += 1
             CountDown(delay, run_at)
             RunAtEveryHour(run_at, secondDiff=secondDiff)
         else: 
@@ -222,10 +242,5 @@ def RunAtEveryHour(lastTime, secondDiff):
     
 if __name__ == '__main__':
     RunAtEveryHour(0, secondDiff=secondDiff)
-    
-    
-    # future change:
-    #     a. change the timer mechanism, define custum No. of test runs such as 24, 
-    #        'one day', etc.
-    #     b. modify RunAtEveryHour, so it can deal with secondDiff=0
-    
+    if plotWhenCompletd:
+        DisplayResults()
