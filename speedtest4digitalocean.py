@@ -9,16 +9,18 @@ import multiprocessing
 import subprocess
 import platform
 from datetime import datetime, timedelta
-from AnalyseResult import DisplayResults
 
-MaxTime = 120           # maximum download testing time (secs)
-secondDiff = 3600       # interval length between test runs (secs)
-noPings = 20            # No. of pings for each test server
-noRuns = 20             # Note that runs between 2:30-6:60 will be skipped, so noRuns
-                        # defines runs for a whole day (24 - 4 = 20)
-plotWhenCompletd = True # if you want to display the results when the runs complete
+MaxTime = 120            # maximum download testing time (secs)
+secondDiff = 3600        # interval length between test runs (secs)
+noPings = 20             # No. of pings for each test server
+noRuns = 20              # Note that runs between 2:30-6:60 will be skipped, so noRuns
+                         # defines runs for a whole day (24 - 4 = 20)
+plotWhenCompletd = True  # if you want to display the results when the runs complete
 if secondDiff == 0:
-    noRuns = 99999999
+    noRuns = 50
+if plotWhenCompletd:
+    from AnalyseResult import DisplayResults
+    
 ###################################################################################
 # All tests in each turn should be able to complete in secondDiff (secs), 
 # otherwise there would be no waiting intervals between test runs.
@@ -32,7 +34,6 @@ if secondDiff == 0:
 
 # global variable
 runCount = 0
-
     
 def ReadURLs(filename):
     urls = []
