@@ -26,7 +26,7 @@ def ReadPingResults(filename):
                 if pingTimeRes.has_key(server):
                     pingTime = np.array([avg,  hour])
                     pingTimeRes[server] = np.vstack((pingTimeRes[server], pingTime))
-                    pingLoss = np.array([avg,  hour])
+                    pingLoss = np.array([loss,  hour])
                     pingLossRes[server] = np.vstack((pingLossRes[server], pingLoss))
                 else:
                     pingTimeRes[server] = np.array([avg,  hour])
